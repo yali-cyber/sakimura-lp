@@ -130,6 +130,41 @@
             font-weight: 900;
         }
 
+        /* CTA Form */
+        .cta-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hero .cta-form {
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control-email {
+            width: 100%;
+            padding: 20px 25px;
+            font-size: 1.1rem;
+            border: 3px solid var(--color-border);
+            background: var(--color-white);
+            color: var(--color-black);
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .form-control-email:focus {
+            outline: none;
+            border-color: var(--color-danger);
+            box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.1);
+        }
+
+        .form-control-email::placeholder {
+            color: var(--color-gray);
+        }
+
         /* CTA Button */
         .cta-button {
             display: inline-block;
@@ -143,8 +178,10 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.4s backwards;
             box-shadow: 0 10px 40px rgba(230, 0, 18, 0.25);
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Noto Sans JP', sans-serif;
         }
 
         .cta-button::before {
@@ -395,6 +432,11 @@
                 letter-spacing: 2px;
             }
 
+            .form-control-email {
+                padding: 18px 20px;
+                font-size: 1rem;
+            }
+
             .cta-button {
                 padding: 20px 35px;
                 font-size: 1.1rem;
@@ -448,9 +490,14 @@
                 <strong>月商1200万を自動で叩き出すプロ</strong>が、<br>
                 その裏側にある「設計図(ブループリント)」を完全無料で公開する。
             </p>
-            <a href="#register" class="cta-button">
-                今すぐ「裏側の設計図」を無料で受け取る
-            </a>
+            <form action="https://utage-system.com/r/bycfC00AfQcy/store" method="post" class="cta-form">
+                <div class="form-group">
+                    <input class="form-control-email" required id="mail-hero" type="email" name="mail" value="" autocomplete="email" placeholder="メールアドレスを入力">
+                </div>
+                <button class="cta-button" type="submit">
+                    今すぐ「裏側の設計図」を無料で受け取る
+                </button>
+            </form>
             <p class="cta-note">※ 登録直後にPDFレポートが届きます</p>
         </div>
     </section>
@@ -579,9 +626,14 @@
                 DRM構築のプロ・サキムラによる<br>
                 『完全自動化の裏側・暴露レポート』
             </h2>
-            <a href="https://lin.ee/XXXXXXXXX" class="cta-button fade-in" target="_blank" rel="noopener">
-                今すぐレポートをメールで受け取る
-            </a>
+            <form action="https://utage-system.com/r/bycfC00AfQcy/store" method="post" class="cta-form fade-in">
+                <div class="form-group">
+                    <input class="form-control-email" required id="mail-final" type="email" name="mail" value="" autocomplete="email" placeholder="メールアドレスを入力">
+                </div>
+                <button class="cta-button" type="submit">
+                    今すぐレポートをメールで受け取る
+                </button>
+            </form>
             <div class="final-cta-notes fade-in">
                 <p>※ 10秒でダウンロード可能</p>
                 <p>※ 予告なく配布を終了する場合があります</p>
