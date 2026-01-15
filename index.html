@@ -36,30 +36,6 @@
             overflow-x: hidden;
         }
 
-        /* Warning Stripes Animation */
-        .warning-stripes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(230, 0, 18, 0.02) 10px,
-                rgba(230, 0, 18, 0.02) 20px
-            );
-            pointer-events: none;
-            z-index: 1;
-            animation: stripeMove 20s linear infinite;
-        }
-
-        @keyframes stripeMove {
-            0% { transform: translateX(0) translateY(0); }
-            100% { transform: translateX(20px) translateY(20px); }
-        }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -79,25 +55,6 @@
             padding: 40px 0;
             position: relative;
             background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
-        }
-
-        .warning-badge {
-            display: inline-block;
-            background: var(--color-danger);
-            color: var(--color-white);
-            padding: 12px 30px;
-            font-weight: 900;
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            transform: rotate(-2deg);
-            margin-bottom: 30px;
-            box-shadow: 0 8px 30px rgba(230, 0, 18, 0.3);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: rotate(-2deg) scale(1); }
-            50% { transform: rotate(-2deg) scale(1.05); }
         }
 
         .headline {
@@ -427,12 +384,6 @@
                 padding: 60px 0 40px;
             }
 
-            .warning-badge {
-                font-size: 0.9rem;
-                padding: 10px 20px;
-                letter-spacing: 2px;
-            }
-
             .form-control-email {
                 padding: 18px 20px;
                 font-size: 1rem;
@@ -476,12 +427,10 @@
     </style>
 </head>
 <body>
-    <div class="warning-stripes"></div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="warning-badge">⚠ 警告 WARNING ⚠</div>
             <h1 class="headline">
                 <span class="headline-accent">まだ、UTAGEを契約するな。</span>
                 お前の「自動化」が<br>99%失敗する理由を、<br>ここで暴露する。
@@ -645,7 +594,7 @@
     <footer>
         <div class="container">
             <p style="margin-bottom: 15px;">
-                <a href="https://sakimura-unneisha.vercel.app/" target="_blank" style="color: var(--color-danger); text-decoration: underline; margin: 0 15px;">運営者情報</a>
+                <a href="https://sakimura-tokushohou.vercel.app/" target="_blank" style="color: var(--color-danger); text-decoration: underline; margin: 0 15px;">特定商取引法に基づく表記</a>
                 <a href="https://sakimura-privacy.vercel.app/" target="_blank" style="color: var(--color-danger); text-decoration: underline; margin: 0 15px;">プライバシーポリシー</a>
             </p>
             <p>&copy; 2026 EZ企画合同会社. All Rights Reserved.</p>
